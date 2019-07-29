@@ -17,3 +17,10 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: Security static source code analysis@88
+  inputs:
+    CheckmarxService: 'CxSastEngine'
+    projectName: 'Project_1'
+    preset: 'Checkmarx Default'
+    fullTeamName: 'Team1'
+    incScan: true
